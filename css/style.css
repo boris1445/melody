@@ -1,16 +1,26 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Regular Regular"), local("BebasNeueRegular"),
+    url("../fonts/BebasNeueRegular.woff2") format("woff2"),
+    url("../fonts/BebasNeueRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
   background-color: #635854;
   padding-top: 12px;
   padding-bottom: 12px;
-  border-bottom: 4px solid #3596F5;
+  border-bottom: 4px solid #3596f5;
 }
 
 .navbar {
@@ -57,4 +67,70 @@ body {
   line-height: 20px;
   text-decoration: none;
   color: #fff;
+}
+
+.main {
+  max-width: 1280px;
+  margin: auto;
+  padding-top: 54px;
+  display: flex;
+}
+
+.main-info {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* элементы друг за другом по вертикали */
+  align-items: center; /* все элементы собираются в центре */
+  justify-content: space-between; /* разбрасываем по краям */
+}
+
+.home-image path {
+  opacity: 0;
+  cursor: pointer; /* курсор палец*/
+}
+
+.home-image path:hover {
+  /* псевдокласс, меняем именно наведение у path в home-image, а не везде*/
+  opacity: 1;
+}
+
+.counter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter-button {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+}
+
+.counter-arrow-down {
+  transform: rotateX(180deg); /* перевернули стрелочку */
+}
+
+.main-title {
+  margin: 0px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: normal;
+  font-size: 37px;
+  line-height: 37px;
+  color: #635854;
+}
+
+.counter {
+  font-family: "Bebas Neue", sans-serif;
+  color: #635854;
+  font-size: 106px;
+}
+
+.button-primary {
+  background: #3596f5;
+  border-radius: 6px; /* скругления */
+  color: #fff;
+  border: none; /* убрали обводку */
+  padding: 16px 36px; /* p16-36 */
+  cursor: pointer;
 }
